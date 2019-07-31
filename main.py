@@ -23,8 +23,7 @@ def create_string(string, option):
 if __name__ == "__main__":
     string = pyperclip.paste()
     if len(sys.argv) != 2:
-        print("Usage: main.py stringOption")
-        print("Valid options: lower, mixed, upper.")
+        print("Usage:\nmain.py (lower|mixed|upper)")
     elif string == "":
         print("You must have a string on your clipboard to be changed.")
 
