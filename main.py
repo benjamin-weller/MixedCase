@@ -4,7 +4,7 @@ import pyperclip
 def create_mixed_word(word):
     start_char = word[:1]
     remainder = word[1:]
-    return start_char.upper() + remainder
+    return start_char.upper() + remainder.lower()
 
 def create_mixed_phrase(phrase):
     returned = ""
@@ -23,7 +23,7 @@ def create_string(string, option):
 if __name__ == "__main__":
     string = pyperclip.paste()
     if len(sys.argv) != 2:
-        print("Usage: stringOption")
+        print("Usage: main.py stringOption")
         print("Valid options: lower, mixed, upper.")
     elif string == "":
         print("You must have a string on your clipboard to be changed.")
